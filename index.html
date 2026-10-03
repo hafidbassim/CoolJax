@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CoolJax HVAC | AC & Heating in Jacksonville</title>
+<meta name="description" content="Residential AC and heating repair, installs, replacements, tune-ups and thermostat installs in the Jacksonville area. Call (904) 477-0221.">
+<style>
+:root{--bg:#0B1220;--panel:#131C2E;--panel2:#18233A;--line:#25334F;--text:#F3F6FA;--muted:#B4C0D2;--cool:#2A9DFF;--heat:#FF7A1A;--mix:.5;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.btn{display:inline-block;background:var(--heat);color:#111827;font-weight:800;text-decoration:none;padding:16px 30px;border-radius:999px;font-size:18px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,122,26,.35)}
+.btn.ghost{background:transparent;color:var(--text);border:2px solid var(--line)}
+.btn.ghost:hover{border-color:var(--cool);box-shadow:none}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(11,18,32,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:52px;height:47px}
+.brand b{font-size:26px;font-style:italic;font-weight:900;letter-spacing:-.5px;line-height:1}
+.brand b i{color:var(--cool);font-style:inherit}.brand b em{color:var(--heat);font-style:inherit}
+.brand small{display:block;font-size:11px;font-weight:700;letter-spacing:.45em;color:var(--muted);margin-top:4px}
+nav{display:flex;align-items:center;gap:26px;font-weight:600}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--text)}
+nav .btn{color:#111827;padding:11px 20px;font-size:15px}
+
+.hero{position:relative;overflow:hidden;padding:56px 0 72px}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+ background:radial-gradient(700px 480px at 92% 0%,rgba(42,157,255,calc(.34*(1 - var(--mix)) + .06)),transparent 70%),
+ radial-gradient(700px 480px at 0% 100%,rgba(255,122,26,calc(.06 + .32*var(--mix))),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+h1{font-size:clamp(42px,7vw,80px);line-height:1;letter-spacing:-.035em;margin:0 0 20px;font-weight:900}
+h1 span{display:block;color:var(--heat)}
+.lede{font-size:clamp(18px,2.4vw,21px);color:var(--muted);max-width:30em;margin:0 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.area{margin-top:22px;color:var(--muted);font-size:15px}
+
+.dial{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:28px;padding:22px 26px 28px;text-align:center}
+.gauge{position:relative;width:min(300px,100%);margin:0 auto}
+.gauge svg{display:block;width:100%;height:auto}
+.temp{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:76px;font-weight:900;letter-spacing:-.04em;padding-bottom:14px}
+.dial h2{margin:4px 0 2px;font-size:30px;letter-spacing:-.02em;transition:color .2s}
+.dial p{margin:0 0 18px;color:var(--muted);min-height:3.1em}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:16px;border-radius:99px;cursor:pointer;background:linear-gradient(90deg,var(--cool),#EAF2FA 50%,var(--heat));margin:6px 0;outline-offset:8px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:36px;height:36px;border-radius:50%;background:var(--bg);border:4px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--bg);border:4px solid #fff}
+.ends{display:flex;justify-content:space-between;font-weight:800}.ends .c{color:var(--cool)}.ends .h{color:var(--heat)}
+
+section{padding:76px 0;border-top:1px solid var(--line)}
+h2.t{font-size:clamp(30px,4.6vw,46px);letter-spacing:-.025em;line-height:1.08;margin:0 0 12px}
+.sub{color:var(--muted);font-size:19px;margin:0 0 36px;max-width:34em}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{border-radius:20px;padding:30px;background:var(--panel);border:1px solid var(--line);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent)}
+.card svg{width:44px;height:44px;margin-bottom:14px}
+.card h3{margin:0 0 14px;font-size:26px;color:var(--accent);letter-spacing:-.01em}
+.card ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:19px}
+.card li{display:flex;gap:12px;align-items:center}
+.card li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);flex:none}
+.cool{--accent:var(--cool)}.warm{--accent:var(--heat)}
+.year{margin-top:20px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px 30px}
+.year h3{margin:0;font-size:22px}
+.year p{margin:0;color:var(--muted);font-size:18px}
+.year b{color:var(--text)}
+
+.season{background:linear-gradient(100deg,rgba(42,157,255,.16),rgba(255,122,26,.16))}
+.season .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.season h2{font-size:clamp(30px,5vw,52px);line-height:1.05;letter-spacing:-.03em;margin:0 0 10px;font-weight:900}
+.season h2 span{color:var(--heat);display:block}
+.season p{margin:0;font-size:20px;color:var(--muted)}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.big{display:block;font-size:clamp(36px,6vw,56px);font-weight:900;letter-spacing:-.03em;text-decoration:none;color:var(--heat);line-height:1.05;margin:14px 0 8px}
+.facts{display:grid;gap:12px;margin-top:26px}
+.facts div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:18px}
+.facts small{display:block;color:var(--muted);font-size:14px}
+.facts a{font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+form{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:16px}
+form h3{margin:0;font-size:24px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px;color:var(--muted)}
+input[type=text],input[type=tel],select,textarea{width:100%;background:var(--bg);color:var(--text);border:1.5px solid var(--line);border-radius:12px;padding:14px;font:inherit;font-size:17px}
+input:focus,select:focus,textarea:focus{border-color:var(--cool);outline:none}
+textarea{min-height:96px;resize:vertical}
+form .note{font-size:14px;color:var(--muted);margin:0}
+
+footer{border-top:1px solid var(--line);padding:30px 0 100px;color:var(--muted);font-size:15px;text-align:center}
+.callbar{display:none}
+@media (max-width:820px){
+ nav a:not(.btn){display:none}
+ .hero{padding:36px 0 52px}.hero .wrap,.contact{grid-template-columns:1fr}
+ .cols{grid-template-columns:1fr}.year{grid-template-columns:1fr;gap:8px}
+ section{padding:56px 0}
+ .callbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(11,18,32,.95);border-top:1px solid var(--line)}
+ .callbar .btn{display:block;text-align:center}
+ nav .btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="brand" href="#top" aria-label="CoolJax HVAC home">
+  <svg viewBox="0 0 200 180" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22,80 100,22" stroke="#2A9DFF" stroke-width="12"/><polyline points="100,22 178,80" stroke="#FF7A1A" stroke-width="12"/><path d="M102.8 99 A40 40 0 1 0 102.8 145" stroke="#2A9DFF" stroke-width="16"/><path d="M150 92 V128 A28 28 0 0 1 122 156" stroke="#FF7A1A" stroke-width="16"/><g stroke="#2A9DFF" stroke-width="4"><line x1="70" y1="102" x2="70" y2="142"/><line x1="52.7" y1="112" x2="87.3" y2="132"/><line x1="52.7" y1="132" x2="87.3" y2="112"/></g></g><path d="M124 96 C132 106 135 113 135 119 A11 11 0 0 1 113 119 C113 112 119 108 124 96 Z" fill="#FF7A1A"/></svg>
+  <span><b><i>Cool</i><em>Jax</em></b><small>HVAC</small></span>
+ </a>
+ <nav><a href="#services">Services</a><a href="#request">Request service</a><a class="btn" href="tel:+19044770221">Call (904) 477-0221</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+ <div>
+  <h1>Jax summers don't quit. <span>Your AC shouldn't.</span></h1>
+  <p class="lede">Residential heating and cooling for every season. Repairs, installs, replacements, and tune-ups for homes in the Jacksonville area.</p>
+  <div class="cta"><a class="btn" href="tel:+19044770221">Call (904) 477-0221</a><a class="btn ghost" href="#request">Request service</a></div>
+  <p class="area">Serving the Jacksonville area</p>
+ </div>
+ <div class="dial">
+  <div class="gauge">
+   <svg viewBox="0 0 220 220" aria-hidden="true">
+    <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="200" y2="0"><stop offset="0" stop-color="#2A9DFF"/><stop offset=".5" stop-color="#F3F6FA"/><stop offset="1" stop-color="#FF7A1A"/></linearGradient></defs>
+    <circle cx="110" cy="110" r="70" fill="#0E1729"/>
+    <path d="M46.36 173.64 A90 90 0 1 1 173.64 173.64" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/>
+    <circle id="knob" cx="110" cy="20" r="11" fill="#0B1220" stroke="#fff" stroke-width="4"/>
+   </svg>
+   <div class="temp"><span id="deg">72</span><span style="font-size:36px;align-self:flex-start;margin-top:64px">°</span></div>
+  </div>
+  <h2 id="dt">Stay cool.</h2>
+  <p id="dp"></p>
+  <input id="slider" type="range" min="0" max="100" value="48" aria-label="Choose cooling or heating">
+  <div class="ends"><span class="c">Cool</span><span class="h">Warm</span></div>
+ </div>
+</div></div>
+
+<section id="services"><div class="wrap">
+ <h2 class="t">One call covers all residential HVAC.</h2>
+ <p class="sub">Whatever your system needs, call CoolJax.</p>
+ <div class="cols">
+  <div class="card cool">
+   <svg viewBox="0 0 48 48" fill="none" stroke="#2A9DFF" stroke-width="4" stroke-linecap="round"><line x1="24" y1="5" x2="24" y2="43"/><line x1="7.5" y1="14.5" x2="40.5" y2="33.5"/><line x1="7.5" y1="33.5" x2="40.5" y2="14.5"/></svg>
+   <h3>Keeping you cool</h3>
+   <ul><li>AC repair</li><li>New AC installs</li><li>AC replacements</li></ul>
+  </div>
+  <div class="card warm">
+   <svg viewBox="0 0 48 48"><path d="M24 4C30 12 34 19 34 27A10 10 0 0 1 14 27C14 21 19 18 20 12 22 14 24 9 24 4Z" fill="#FF7A1A"/><path d="M24 26C27 30 28 33 28 35A4 4 0 0 1 20 35C20 32 23 30 24 26Z" fill="#FFC56E"/></svg>
+   <h3>Keeping you warm</h3>
+   <ul><li>Heating repair</li><li>New heating installs</li><li>Heating replacements</li></ul>
+  </div>
+ </div>
+ <div class="year"><h3>Year-round</h3><p><b>Tune-ups &amp; maintenance</b> and <b>thermostat installs.</b> A tune-up now beats a breakdown in July.</p></div>
+</div></section>
+
+<section class="season"><div class="wrap">
+ <div>
+  <h2>Cooler mornings. <span>Warm afternoons.</span></h2>
+  <p>Is your system ready for both? Get a fall tune-up and heating check.</p>
+ </div>
+ <a class="btn" href="tel:+19044770221">Book a tune-up</a>
+</div></section>
+
+<section id="request"><div class="wrap contact">
+ <div>
+  <h2 class="t">Talk to Abdel.</h2>
+  <p class="sub">Owner and HVAC technician. Call, or send a request and get your home comfortable again.</p>
+  <a class="big" href="tel:+19044770221">(904) 477-0221</a>
+  <div class="facts">
+   <div><small>Email</small><a href="mailto:service@cooljaxhvac.com">service@cooljaxhvac.com</a></div>
+   <div><small>Service area</small>Jacksonville area</div>
+  </div>
+ </div>
+ <form id="rf">
+  <h3>Request service</h3>
+  <label>Your name<input type="text" id="n" autocomplete="name" required></label>
+  <label>Phone<input type="tel" id="p" autocomplete="tel" required></label>
+  <label>What do you need?
+   <select id="w"><option>AC repair</option><option>Heating repair</option><option>New system install</option><option>System replacement</option><option>Tune-up / maintenance</option><option>Thermostat install</option></select>
+  </label>
+  <label>Details (optional)<textarea id="m"></textarea></label>
+  <button class="btn" id="sb" type="submit">Send request</button>
+  <p id="st" role="status" aria-live="polite" style="margin:0;font-weight:700"></p>
+  <p class="note">We get your request right away. For fastest service, call (904) 477-0221.</p>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">CoolJax HVAC &middot; Heating, cooling, comfort &middot; Serving the Jacksonville area<br>(904) 477-0221 &middot; service@cooljaxhvac.com</div></footer>
+<div class="callbar"><a class="btn" href="tel:+19044770221">Call (904) 477-0221</a></div>
+
+<script>
+var s=document.getElementById('slider'),k=document.getElementById('knob'),dg=document.getElementById('deg'),dt=document.getElementById('dt'),dp=document.getElementById('dp');
+function upd(){
+ var v=+s.value,w=v>=50,a=(135+2.7*v)*Math.PI/180;
+ k.setAttribute('cx',(110+90*Math.cos(a)).toFixed(1));k.setAttribute('cy',(110+90*Math.sin(a)).toFixed(1));
+ dg.textContent=Math.round(60+v*.25);
+ document.documentElement.style.setProperty('--mix',(v/100).toFixed(2));
+ dt.textContent=w?'Stay warm.':'Stay cool.';
+ dt.style.color=w?'#FF7A1A':'#2A9DFF';
+ dp.textContent=w?'Heating repair, installs, and replacements for your home.':'AC repair, installs, and replacements for your home.';
+}
+s.addEventListener('input',upd);upd();
+/* ===== GOOGLE FORM SETUP: paste your 5 values here (see setup steps) ===== */
+var GF={
+ action:'https://docs.google.com/forms/d/e/1FAIpQLSfIl1X8PNLMRop7oNGndWV8L-rVb3RM5aQ_HY5ZALHE4AsHQQ/formResponse',
+ name:'entry.1284161740',
+ phone:'entry.1327681561',
+ need:'entry.1965580250',
+ details:'' /* optional: paste entry ID here if you add a Details question to the form */
+};
+var GF_OPTS=['AC repair','Heating repair','System replacement','Tune-up / Maintenance','Thermostat install'];
+/* ======================================================================== */
+var rf=document.getElementById('rf'),st=document.getElementById('st'),sb=document.getElementById('sb');
+function mailFallback(){
+ var b='Name: '+n.value+'\nPhone: '+p.value+'\nNeed: '+w.value+'\n\n'+m.value;
+ location.href='mailto:service@cooljaxhvac.com?subject='+encodeURIComponent('Service request: '+w.value)+'&body='+encodeURIComponent(b);
+}
+rf.addEventListener('submit',function(e){
+ e.preventDefault();
+ if(GF.name.indexOf('entry.000')===0){mailFallback();return}
+ var d=new URLSearchParams();
+ d.append(GF.name,n.value);d.append(GF.phone,p.value);
+ var opt=GF_OPTS.filter(function(o){return o.toLowerCase()===w.value.toLowerCase()})[0];
+ if(opt){d.append(GF.need,opt)}else{d.append(GF.need,'__other_option__');d.append(GF.need+'.other_option_response',w.value)}
+ if(GF.details){d.append(GF.details,m.value||'(none)')}
+ sb.disabled=true;sb.textContent='Sending...';st.textContent='';
+ fetch(GF.action,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:d.toString()})
+ .then(function(){rf.reset();st.textContent="Thanks! Your request was sent. Abdel will call you soon.";st.style.color='#7DDC9A'})
+ .catch(function(){st.textContent="Couldn't send. Opening your email app instead.";st.style.color='#FF7A1A';mailFallback()})
+ .then(function(){sb.disabled=false;sb.textContent='Send request'});
+});
+</script>
+</body>
+</html>
